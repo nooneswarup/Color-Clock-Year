@@ -86,7 +86,7 @@ function dateHeading() {
     month: "short",
     year: "numeric",
   }).format(datenow);
-  dateEle.innerHTML = datenow;
+  dateEle.innerHTML = datenow.replaceAll(",", " ");
 
   let timenow = new Date();
   timenow = Intl.DateTimeFormat(undefined, {
